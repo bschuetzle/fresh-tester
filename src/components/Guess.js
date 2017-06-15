@@ -37,17 +37,24 @@ class Guess extends Component {
     if (this.props.display==="true") {
       return (
         <div className="Guess-container">
-            <p>{this.props.description}</p>
-            <p>What is your guess?</p>
-            <input
-              type='number'
-              onChange={event => this.onInputChange(event)}
-            />
-            <input
-              type='button'
-              value='Go!'
-              onClick={event => this.onGuessClick(event)}
-            />
+            <p className="Movie-description">{this.props.description}</p>
+            <p className="Guess-request">What is your guess?</p>
+            <div className="Guess-form">
+              <input
+                className="Guess-input"
+                type='number'
+                min="1"
+                max="100"
+                maxLength="3"
+                onChange={event => this.onInputChange(event)}
+              />
+              <input
+                className="Guess-submit"
+                type='button'
+                value='Go!'
+                onClick={event => this.onGuessClick(event)}
+              />
+            </div>
             <Results display={this.state.displayResults} guess={this.state.guess} rating={this.props.rating}/>
         </div>
       )

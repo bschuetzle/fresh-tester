@@ -57,15 +57,17 @@ class Search extends Component {
       return (
         <div>
           <p className="Search-header">
-            Search a Movie and Guess the TomatoMeter Score!
+            Search a Movie and Guess the TOMATOMETER Rating!
           </p>
           <div className="Search-form">
             <input
+              className="Title-search"
               type='text'
               placeholder='Enter a movie title'
               onChange={event => this.onInputChange(event)}
             />
             <input
+              className="Search-button"
               type='button'
               value='Search'
               onClick={event => this.onSearchClick(event)}
