@@ -58,3 +58,7 @@
 .Search-form {
   text-align: center;
 }
+
+.Guess-container {
+  display: block;
+}

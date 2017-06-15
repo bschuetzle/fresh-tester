@@ -6,7 +6,7 @@ class Nav extends Component {
     return (
       <div className="Navbar">
           <img className="Logo" src={logo} alt="logo"/>
-          <h2 className="NavTitle">FreshTest</h2>
+          <h2 className="NavTitle">TomatoTest</h2>
       </div>
     );
   }
