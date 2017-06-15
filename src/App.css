@@ -93,6 +93,12 @@
   outline: none;
 }
 
+.Error-msg {
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
 .Movie-description {
   font-family: "Helvetica", sans-serif;
   font-size: 16px;
@@ -102,7 +108,7 @@
 
 .Guess-request {
   font-family: "Acme", sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
 }
 

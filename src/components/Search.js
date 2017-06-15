@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MovieModel from '../models/MovieModel'
 import Guess from './Guess.js';
+import Error from './Error.js';
 
 class Search extends Component {
 
@@ -8,7 +9,8 @@ class Search extends Component {
     super()
     this.state = {
       searchText: '',
-      movieWasFound: 'false'
+      movieWasFound: 'false',
+      error: ''
     }
     this.onInputChange = this.onInputChange.bind(this);
     this.onSearchClick = this.onSearchClick.bind(this);
@@ -27,7 +29,8 @@ class Search extends Component {
     console.log("Search Text=",this.state.searchText)
     var movie = this.state.searchText;
     this.setState({
-      movieWasFound: 'false'
+      movieWasFound: 'false',
+      error: 'Oops! This movie could not be found.'
     })
     MovieModel.index().then( (res) => {
       console.log(res)
@@ -38,7 +41,8 @@ class Search extends Component {
             id: res[i].id,
             title: res[i].title,
             description: res[i].description,
-            rating: res[i].rating
+            rating: res[i].rating,
+            error: ''
           })
           console.log("Movie was found:",this.state.movieWasFound)
           console.log("Movie title:",this.state.title)

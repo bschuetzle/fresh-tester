@@ -30,7 +30,9 @@ class Results extends Component {
 
     var diff = Math.abs(this.props.guess - this.props.rating);
     var msg = '';
-    if (diff <= 5) {
+    if (diff == 0) {
+      msg = 'Awesome, you are exactly right!'
+    } else if (diff <= 5) {
       msg = 'Wow, you pretty much nailed it!'
     } else if (diff <= 15) {
       msg = 'Not too bad!'
