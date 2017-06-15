@@ -40,10 +40,13 @@
 
 .Logo {
   display: inline;
-  padding-left: 50px;
+  padding-left: 60px;
+  padding-top: 5px;
 }
 
 .NavTitle {
+  font-style: "Roboto", sans-serif;
+  font-size: 22px;
   display: inline;
   position: relative;
   top: -15px;
@@ -61,4 +64,13 @@
 
 .Guess-container {
   display: block;
+}
+
+.counter {
+  font-size:50px;
+  background-color: #FF6F6F;
+  width:200px;
+  border-radius: 50%;
+  height:200px;
+  vertical-align: middle;
 }

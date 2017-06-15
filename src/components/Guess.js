@@ -5,8 +5,8 @@ import Results from './Results.js';
 class Guess extends Component {
 
 
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
       displayResults: 'false',
       guess: 0
